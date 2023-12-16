@@ -1,8 +1,5 @@
 <?php 
-    require_once "classes/RecipesManager.php";
-
-    session_name('BreakTimeSESS');
-    session_start();
+    require_once "classes/RecipesManager.php";;
 
     if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $result = RecipesManager::getAll(10);
@@ -30,7 +27,7 @@
                     if ($result) {
                         foreach ($result as $row) {
                 ?>
-                            <a class="recipe" href="/BreakTime/recipe.php?id=<?= $row["id"] ?>">
+                            <a class="recipe" href="/BreakTime/recipe?id=<?= $row["id"] ?>">
                                 <section class="image">
                                     <img src="<?= $row["image"] ?>" alt="<?= $row["title"] ?> image">
                                 </section>

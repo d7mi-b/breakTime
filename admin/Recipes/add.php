@@ -1,13 +1,8 @@
 <?php
 
-    require_once "../../classes/Database.php";
-    require_once "../../classes/RecipesManager.php";
-    require_once "../../classes/ProvidersManger.php";
-
-    session_name('BreakTimeSESS');
-    session_start();
-    if (!isset($_SESSION["email"]))
-        header("Location: /BreakTime/");
+    require_once "././classes/Database.php";
+    require_once "././classes/RecipesManager.php";
+    require_once "././classes/ProvidersManger.php";
 
     $title = $_POST['title'] ?? '';
     $descrption = $_POST['descrption'] ?? '';
@@ -40,7 +35,7 @@
             $id = mysqli_insert_id($connection);
 
             if ($result === true) {
-                header("Location: /BreakTime/recipe.php?id=$id");
+                header("Location: /BreakTime/recipe?id=$id");
             } else {
                 $error = $result;
             }
@@ -55,10 +50,10 @@
 <!-- saved from url=(0090)https://website71293.nicepage.io/Page-10.html?version=a3d807fa-1ae9-4540-b47b-81e2049aee83 -->
 <html style="font-size: 16px;" class="u-responsive-xl">
 
-    <?php require_once "../../components/haed.php" ?>
+    <?php require_once "././components/haed.php" ?>
 
     <body class="u-body" data-new-gr-c-s-check-loaded="14.1048.0" data-gr-ext-installed="">
-        <?php require_once "../../components/navbar.php" ?>
+        <?php require_once "././components/navbar.php" ?>
 
         <main class=" u-section-2" id="carousel_0f8b">
             <div class="u-absolute-hcenter-xs u-expanded-height u-opacity u-opacity-60 u-palette-3-base u-shape u-shape-rectangle u-shape-1"></div>
@@ -132,7 +127,7 @@
             </section>
         </main>
 
-        <?php require_once '../../components/footer.php' ?>
+        <?php require_once '././components/footer.php' ?>
     </body>
 
 </html>

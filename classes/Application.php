@@ -2,9 +2,16 @@
 
 class Application
 {
-    public static $name = "My Blog";
+    public static $name = "BreakTime";
+    public static $blogDescription = "Start your day with an easy pancake or omelet breakfast. Or plan a showstopping brunch with quiches, waffles, casseroles, and more!";
 
-    public static $blogName = "Clean Blog";
+    public static $maintaniceMood = false;
+    public static $maintaniceMessage = "Service Unavailable";
 
-    public static $blogDescription = "A Blog Theme by Start Bootstrap";
+    public static $serverDB = "localhost";
+    public static $userDB = "root";
+    public static $passwordDB = "";
+    public static $database = "BreakTime";
+
+
 }

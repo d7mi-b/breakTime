@@ -1,8 +1,3 @@
-<?php 
-    session_name('BreakTimeSESS');
-    session_start();
-?>
-
 <!DOCTYPE html>
 <!-- saved from url=(0090)https://website71293.nicepage.io/Page-10.html?version=a3d807fa-1ae9-4540-b47b-81e2049aee83 -->
 <html style="font-size: 16px;" class="u-responsive-xl">
@@ -16,27 +11,26 @@
                 <div
                     class="u-absolute-hcenter-xs u-expanded-height u-opacity u-opacity-60 u-palette-3-base u-shape u-shape-rectangle u-shape-1">
                 </div>
-                <h1 class="u-custom-font u-font-playfair-display u-text u-text-1">BreakTime</h1>
-                <p class="u-text u-text-2">Start your day with an easy pancake or omelet breakfast. Or plan a showstopping
-                    brunch with quiches, waffles, casseroles, and more!</p>
+                <h1 class="u-custom-font u-font-playfair-display u-text u-text-1"><?= Application::$name ?></h1>
+                <p class="u-text u-text-2"><?= Application::$blogDescription ?></p>
                 <div class="u-clearfix u-expanded-width u-gutter-20 u-layout-wrap u-layout-wrap-1">
                     <div class="u-gutter-0 u-layout">
                         <div class="u-layout-row">
                             <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-1"
                                 src="">
                                 <div class="u-container-layout u-valign-bottom u-container-layout-1">
-                                    <a href="/BreakTime/recipes.php"
+                                    <a href="/BreakTime/recipes"
                                         class="u-link u-no-underline u-text-black u-text-hover-palette-2-base u-link-1">recipes</a>
-                                    <a href="/BreakTime/providers.php"
+                                    <a href="/BreakTime/providers"
                                         class="u-link u-no-underline u-text-black u-text-hover-palette-2-base u-link-2">Providers</a>
                                     <?php
                                         if (isset($_SESSION["email"])) {
                                     ?>
-                                        <a href="/BreakTime/admin/Recipes/add.php"
+                                        <a href="/BreakTime/admin/Recipes/add"
                                             class="u-link u-no-underline u-text-black u-text-hover-palette-2-base u-link-2">
                                             Add Recipes
                                         </a>
-                                        <a href="/BreakTime/admin/Providers/add.php"
+                                        <a href="/BreakTime/admin/Providers/add"
                                             class="u-link u-no-underline u-text-black u-text-hover-palette-2-base u-link-2">
                                             Add Providers
                                         </a>

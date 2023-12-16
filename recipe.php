@@ -1,9 +1,6 @@
 <?php 
     require_once "classes/RecipesManager.php";
 
-    session_name('BreakTimeSESS');
-    session_start();
-
     $id = $_GET["id"] ?? null;
 
     if ($_SERVER["REQUEST_METHOD"] === "GET" && $id) {
@@ -36,7 +33,7 @@
                 <?php
                     if (isset($_SESSION["email"])) {
                 ?>
-                    <p><a href="/BreakTime/admin/Recipes/update.php?id=<?= $recipe['id'] ?? '' ?>">Edit</a> - <a href="/BreakTime/admin/Recipes/delete.php?id=<?= $recipe['id'] ?? '' ?>">Delete</a></p>
+                    <p><a href="/BreakTime/recipe/update?id=<?= $recipe['id'] ?? '' ?>">Edit</a> - <a href="/BreakTime/recipe/delete?id=<?= $recipe['id'] ?? '' ?>">Delete</a></p>
                 <?php
                     }
                 ?>

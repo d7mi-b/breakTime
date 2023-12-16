@@ -2,10 +2,10 @@
 
     require_once "Database.php";
 
-    class RecipesManager {
+    class RecipesManager implements Table {
         private static $offset = 0;
 
-        public static function getAll($count) : array {
+        public static function getAll($count = null) : array {
             global $connection;
 
             $recipes = [];
@@ -14,7 +14,7 @@
                 select recipes.id, title, descrption, type, image, providers.name, category from recipes
                 inner join providers on recipes.provider_id = providers.id
                 inner join categories on recipes.category_id = categories.id
-                limit 0, $count;
+                " . ($count ? "limit 0, $count" : '') . ";
             ");
 
             RecipesManager::$offset = RecipesManager::$offset + $count;

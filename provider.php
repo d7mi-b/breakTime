@@ -1,9 +1,6 @@
 <?php 
     require_once "classes/ProvidersManger.php";
 
-    session_name('BreakTimeSESS');
-    session_start();
-
     $id = $_GET["id"] ?? null;
 
     if ($_SERVER["REQUEST_METHOD"] === "GET" && $id) {
@@ -39,7 +36,7 @@
                 <?php
                     if (isset($_SESSION["email"])) {
                 ?>
-                    <p><a href="/BreakTime/admin/Providers/update.php?id=<?= $id ?? '' ?>">Edit</a> - <a href="/BreakTime/admin/Providers/delete.php?id=<?= $id ?? '' ?>">Delete</a></p>
+                    <p><a href="/BreakTime/provider/update?id=<?= $id ?? '' ?>">Edit</a> - <a href="/BreakTime/provider/delete?id=<?= $id ?? '' ?>">Delete</a></p>
                 <?php
                     }
                 ?>

@@ -2,7 +2,7 @@
 
     require_once "Database.php";
 
-    class ProvidersManger {
+    class ProvidersManger implements Table {
         private static $offset = 0;
 
         public static function getAll($count = null) : array {

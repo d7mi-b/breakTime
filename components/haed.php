@@ -1,3 +1,7 @@
+<?php 
+    require_once "./classes/Application.php";
+?>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +12,7 @@
     <!-- <link rel="stylesheet" href="./main.css" media="screen"> -->
     <link rel="stylesheet" href="/BreakTime/styles/main.css" media="screen">
     <link rel="stylesheet" href="/BreakTime/styles/style.css">
-    <title>Break Time</title>
+    <title><?= Application::$name ?></title>
     <style class="u-style">
         .u-section-2 .u-sheet-1 {
             min-height: 749px

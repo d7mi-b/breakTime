@@ -1,10 +1,5 @@
 <?php
-    require_once "../classes/Database.php";
-
-    session_name('BreakTimeSESS');
-    session_start();
-    if (isset($_SESSION["email"]))
-        header("Location: /BreakTime/");
+    require_once "./classes/Database.php";
 
     $email = $_POST["email"] ?? null;
     $password = $_POST["password"] ?? null;
@@ -30,8 +25,6 @@
             $match = password_verify($password, $admin["password"]);
 
             if ($match) {
-                session_name('BreakTimeSESS');
-                session_start();
                 $_SESSION["email"] = $email;
                 header("Location: /BreakTime/");
             } else {
@@ -48,7 +41,7 @@
 <!-- saved from url=(0090)https://website71293.nicepage.io/Page-10.html?version=a3d807fa-1ae9-4540-b47b-81e2049aee83 -->
 <html style="font-size: 16px;" class="u-responsive-xl">
 
-    <?php require_once "../components/haed.php" ?>
+    <?php require_once "./components/haed.php" ?>
 
     <body class="u-body" data-new-gr-c-s-check-loaded="14.1048.0" data-gr-ext-installed="">
 
@@ -91,7 +84,7 @@
                             </div>
                             <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-3" src="">
                                 <div class="u-container-layout u-valign-bottom u-container-layout-3">
-                                    <img class="u-expand-resize u-expanded-width u-image u-image-2" src="../images/2.jpg">
+                                    <img class="u-expand-resize u-expanded-width u-image u-image-2" src="./images/2.jpg">
                                 </div>
                             </div>
                         </div>
