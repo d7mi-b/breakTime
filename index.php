@@ -26,13 +26,17 @@
                                     <?php
                                         if (isset($_SESSION["email"])) {
                                     ?>
-                                        <a href="/BreakTime/admin/Recipes/add"
+                                        <a href="/BreakTime/recipe/add"
                                             class="u-link u-no-underline u-text-black u-text-hover-palette-2-base u-link-2">
                                             Add Recipes
                                         </a>
-                                        <a href="/BreakTime/admin/Providers/add"
+                                        <a href="/BreakTime/provider/add"
                                             class="u-link u-no-underline u-text-black u-text-hover-palette-2-base u-link-2">
                                             Add Providers
+                                        </a>
+                                        <a href="/BreakTime/logout"
+                                            class="u-link u-no-underline u-text-black u-text-hover-palette-2-base u-link-2">
+                                            Logout
                                         </a>
                                     <?php
                                         }

@@ -38,6 +38,12 @@
                         Add Providers
                     </a>
                 </li>
+                <li>
+                    <a href="/BreakTime/logout"
+                        class="u-link u-no-underline u-text-black u-text-hover-palette-2-base u-link-2">
+                        Logout
+                    </a>
+                </li>
             <?php
                 }
             ?>

@@ -11,6 +11,7 @@
         '/BreakTime/provider/add',
         '/BreakTime/provider/update',
         '/BreakTime/provider/delete',
+        '/BreakTime/logout',
     ];
 
     if ($_SERVER["REQUEST_URI"] !== "/BreakTime/server-down" && Application::$maintaniceMood) {
@@ -67,6 +68,10 @@
                 }
                 case '/BreakTime/provider/delete': {
                     require_once "admin/Providers/delete.php";
+                    break;
+                }
+                case '/BreakTime/logout': {
+                    require_once "admin/logout.php";
                     break;
                 }
             }
