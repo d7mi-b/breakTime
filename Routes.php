@@ -21,6 +21,10 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        if ($_SERVER["REDIRECT_URL"] === '/BreakTime/login') {
+            require_once "admin/login.php";
+        }
+
         if (isset($_SESSION["email"])) {
             switch ($_SERVER["REDIRECT_URL"]) {
                 case '/BreakTime/recipe/add': {
